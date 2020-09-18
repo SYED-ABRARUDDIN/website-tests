@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="js/index.js" defer></script>
+      </head>
+      <body>
+         <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">ABC HOSPITAL</a>
+              <div class="collapse navbar-collapse ">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="nav-item">
+                   <li class="nav-link" ><a href="#home" >Home</a></li></li>
+                   <li class="nav-item">
+                   <li class="nav-link"><a href="#" class="button" onclick="openForm()">Appointments</a></li></li>
+                   <li class="nav-item"></li>
+                   <li class="nav-link" ><a href="#" class="button" onclick="openForm1()">Login</a></li></li>
+                   
+                </ul>
+                    </li>
+                </ul>
+              </div>
+          </div>
+        </nav>
+      
+      <div class="container">
+        <div class="jumbotron text-center" id="home">
+          <img src="welcome.gif" >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+            into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+            passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+      </div>
+      <div class="container">
+      <div class="row">
+        <div class="col-md-4" >
+          <a href="#" class="thumbnail">
+            <img src="doctor.jfif" alt="Doctors">
+          </a>
+          <h3>Doctors</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+             when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+             into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+             passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="thumbnail" >
+            <img src="medeq.jfif" alt="medical equip">
+          </a>
+          <h3>Equipment</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+             when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+             into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+             passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+        </div>
+        <div class="col-md-4">
+          <a href="#" class="thumbnail">
+            <img src="hosp.jfif" alt="infra">
+          </a>
+          <h3>Infrastructure</h3>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+             when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+             into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum 
+             passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+
+        </div>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="form-popup" id="myForm">
+        <form method="POST" class="form-container" name="google-sheet">
+          <h1 class="center">Appointment</h1>
+          <label><b>Name</b></label>
+          <input type="text"  class="form-control" placeholder="Enter Name" name="name" required>
+      
+          <label><b>Email</b></label>
+          <input type="email" class="form-control" placeholder="Enter Email" name="email" required>
+      
+          <label><b>Phone</b></label>
+          <input type="number"  class="form-control" placeholder="Enter PHone" name="phone" required>
+
+          <label><b>Field</b></label>
+          <select name="field"  class="form-control" placeholder="Select field">
+            <option>General</option>
+            <option>pulmanalogist</option>
+            <option>nephrologist</option>
+            <option>neurologist</option>
+            <option>cardiologist</option>
+            <option>other</option>
+        </select>
+      
+          <button type="submit" class="btn" name="submit" onclick="closeForm()">Take Appointment</button>
+          <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+      <div class="form-popup1" id="myForm1">
+        <form method="POST" class="form-container" name="google-sheet1">
+          <h1 class="center">Login</h1>
+          <label><b>Email</b></label>
+          <input type="email" class="form-control" placeholder="Enter Email" name="emaila" required>
+      
+          <label><b>Password</b></label>
+          <input type="number"  class="form-control" placeholder="Enter Password" name="password" required>
+
+          <button type="submit" class="btn" name="submit" onclick="closeForm1()">Login</button>
+          <button type="submit" class="btn cancel" onclick="closeForm1()">Close</button>
+        </form>
+      </div>
+    </div>
+
+    
+
+        <div class="navbar navbar-inverse navbar-bottom">
+          <div class="container">
+            <div class="navbar-text pull-left">
+              <p>copyright ProgrammingKnowledge</p>
+
+            </div>
+          </div>
+        </div>
+</body>
+</html>
